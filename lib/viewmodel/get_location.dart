@@ -37,15 +37,9 @@ Future<void> determinePosition() async {
       // Android's shouldShowRequestPermissionRationale
       // returned true. According to Android guidelines
       // your App should show an explanatory UI now.
-      var a = await Geolocator.getLastKnownPosition();
+
       print("last known position is ");
 
-      if (a != null) {
-        print(a.longitude);
-        MyLocation.latitude = a.latitude.toString();
-        MyLocation.longitude = a.longitude.toString();
-        return;
-      }
       return;
     }
   }
