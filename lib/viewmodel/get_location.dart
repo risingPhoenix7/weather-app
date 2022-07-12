@@ -47,7 +47,7 @@ Future<void> determinePosition() async {
   // When we reach here, permissions are granted and we can
   // continue accessing the position of the device.
   var a = await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.medium);
+      desiredAccuracy: LocationAccuracy.best);
   print('yay location fetched correctly');
   MyLocation.isLocationResult.value = true;
   MyLocation.latitude = a.latitude.toString();
